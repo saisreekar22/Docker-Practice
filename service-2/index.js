@@ -17,7 +17,6 @@ mongoose.connect("mongodb://mongo:27017", {
   
 let database
 
-// APP
 app.get('/', (req, res) => {
   database.collection('contacts').find({}).toArray((err, result)=> {
     if (err) throw err
